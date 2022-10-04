@@ -1,0 +1,1933 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: #000;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #FCFCFC;;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------CONTAINER-CLASS---------*/
+._container {
+    max-width: 1245px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+}
+
+.ibg {
+    position: relative;
+}
+
+.ibg image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/*---------HEADER---------*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;;
+}
+
+.header__container {
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+
+@media (max-width: 479px) {
+    .header__container {
+        min-height: 70px;
+    }
+}
+
+.header__logo-max {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 64px;
+    text-align: center;
+    color: #B92C5A;
+}
+
+.header__logo-mini {
+    position: absolute;
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #E8568D;
+    margin-left: -94px;
+    margin-top: 50px;
+}
+
+.header__burger {
+    display: none;
+}
+
+.menu {
+    padding: 5px 115px;
+}
+
+.menu__list {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.menu__item {
+    margin: 0px 45px 0px 0px;
+}
+
+.menu__link {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FF7FB0;
+}
+
+@media (max-width: 767px) {
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+    }
+    
+    .header__burger span {
+        position: absolute;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+   
+    .header__burger::before {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::after {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+    }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__burger::before {
+        top: 0;
+    }
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFDCC7;
+        overflow: auto;
+    }
+
+    .header__menu.active {
+        top: 0;
+        padding: 70px;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    .menu__link {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+
+/*---------PAGE---------*/
+
+.page {
+    flex: 1 1 auto;
+}
+
+/*---------MAIN---------*/
+
+.main-block {
+    position: relative;
+}
+
+.main-block__image {
+    position: absolute;
+    flex: 0 1 50%;
+    margin-left: 450px;
+    margin-top: -356px;
+}
+
+.main-block__image img {
+    max-width: 80%;
+}
+
+.main-block__button {
+    background: #E2BE59;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 53%);
+    border-radius: 111px;
+    width: 164px;
+    height: 55px;
+    font-family: 'Open Sans';
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    padding: 28px;
+    color: #000000;
+    margin-top: 27px;
+    margin-left: 7px;
+}
+
+.main-block__line {
+    width: 1206px;
+    height: 127px;
+    background: #E2BE59;
+    margin-left: -508px;
+    border-radius: 243px;
+}
+
+.main-block__body {
+    padding: 184px 0px 50px 0px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.main-block__title {
+    position: absolute;
+    font-size: 35px;
+    font-weight: 500;
+    color: #000000;
+    margin-top: -424px;
+    margin-left: 35px;
+}
+
+.main-block__image {
+    position: absolute;
+    mix-blend-mode: darken;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.main-block__dialog {
+    position: relative;
+    margin-top: 85px;
+    margin-left: -25px;
+}
+
+.main-block__pixel {
+    margin-top: 260px;
+    margin-left: -658px;
+}
+
+.main-block__dialogmain {
+    margin-top: 222px;
+    margin-left: -19px;
+}
+
+.main-block__text {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+    margin-top: -248px;
+    margin-left: 290px;
+    text-align: center;
+}
+
+.main-block__girly {
+    margin-left: 138px;
+    margin-top: -70px;
+}
+
+.main-block__pixel-text {
+    position: absolute;
+    z-index: -1;
+    margin-left: -693px;
+    margin-top: -69px;
+}
+
+.main-block__dog {
+    width: 170px;
+    height: 170px;
+    margin-left: 603px;
+    margin-top: -126px;
+}
+
+.main-block__letter {
+    width: 100px;
+    margin-top: -272px;
+    margin-left: -150px;
+    height: 64px;
+}
+
+.main-block__bear {
+    margin-left: -686px;
+    margin-top: -159px;
+}
+
+@media screen and (min-width:230px) and (max-width:290px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        width: 189px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -79px;
+        margin-left: 62px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 163px;
+        height: 101px;
+        margin-top: -53px;
+        margin-left: 38px;
+    }
+    
+    .main-block__pixel {
+        text-align: center;
+        width: 174px;
+        height: 133px;
+        margin-top: -1px;
+        margin-left: 35px;
+    }
+    
+    .main-block__dialogmain {
+        display: none;
+    }
+    
+    .main-block__text {
+        width: 175px;
+        position: absolute;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: 5px;
+        margin-left: 37px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:290px) and (max-width:349px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        width: 322px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -68px;
+        margin-left: 14px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 279px;
+        height: 91px;
+        margin-top: 12px;
+        margin-left: -11px;
+    }
+    
+    .main-block__pixel {
+        width: 178px;
+        height: 140px;
+        margin-top: -1px;
+        margin-left: -15px;
+    }
+    
+    .main-block__dialogmain {
+        display: none;
+    }
+    
+    .main-block__text {
+        width: 141px;
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -135px;
+        margin-left: 143px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:349px) and (max-width:389px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        width: 241px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -221px;
+        margin-left: 19px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 216px;
+        height: 91px;
+        margin-top: 12px;
+        margin-left: -11px;
+    }
+    
+    .main-block__pixel {
+        width: 171px;
+        height: 140px;
+        margin-top: 105px;
+        margin-left: -234px;
+    }
+    
+    .main-block__dialogmain {
+        width: 181px;
+        height: 102px;
+        margin-top: -136px;
+        margin-left: 156px;
+    }
+    
+    .main-block__text {
+        width: 163px;
+        position: absolute;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -127px;
+        margin-left: 170px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:389px) and (max-width:444px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        width: 241px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -235px;
+        margin-left: 49px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 283px;
+        height: 111px;
+        margin-top: 12px;
+        margin-left: -11px;
+    }
+    
+    .main-block__pixel {
+        width: 171px;
+        height: 140px;
+        margin-top: 124px;
+        margin-left: -299px;
+    }
+    
+    .main-block__dialogmain {
+        width: 222px;
+        height: 136px;
+        margin-top: -136px;
+        margin-left: 156px;
+    }
+    
+    .main-block__text {
+        width: 183px;
+        position: absolute;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -100px;
+        margin-left: 184px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:444px) and (max-width:540px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        width: 241px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -294px;
+        margin-left: 48px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 268px;
+        height: 121px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 151px;
+        margin-left: -284px;
+    }
+    
+    .main-block__dialogmain {
+        width: 223px;
+        height: 121px;
+        margin-top: -200px;
+        margin-left: 209px;
+    }
+    
+    .main-block__text {
+        width: 163px;
+        position: absolute;
+        font-size: 18px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -188px;
+        margin-left: 250px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:600px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        width: 241px;
+        font-size: 30px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -346px;
+        margin-left: 56px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 341px;
+        height: 194px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 217px;
+        margin-left: -362px;
+    }
+    
+    .main-block__dialogmain {
+        width: 293px;
+        height: 142px;
+        margin-top: 200px;
+        margin-left: -31px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -153px;
+        margin-left: 239px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:665px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        font-size: 35px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -352px;
+        margin-left: 111px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 500px;
+        height: 194px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 218px;
+        margin-left: -498px;
+    }
+    
+    .main-block__dialogmain {
+        width: 326px;
+        height: 137px;
+        margin-top: 201px;
+        margin-left: -31px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 22px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -158px;
+        margin-left: 267px;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:665px) and (max-width:700px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        font-size: 35px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -410px;
+        margin-left: 111px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 522px;
+        height: 200px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 218px;
+        margin-left: -498px;
+    }
+    
+    .main-block__dialogmain {
+        width: 375px;
+        height: 217px;
+        margin-top: 244px;
+        margin-left: -19px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 25px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -132px;
+        margin-left: 315px;
+        text-align: center;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:800px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        font-size: 35px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -147px;
+        margin-left: 83px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 686px;
+        height: 200px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 16px;
+        margin-left: -4px;
+        height: 300px;
+        width: 350px;
+    }
+    
+    .main-block__dialogmain {
+        width: 342px;
+        height: 217px;
+        margin-top: -329px;
+        margin-left: 324px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 24px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -254px;
+        margin-left: 359px;
+        text-align: center;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1000px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        font-size: 39px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -147px;
+        margin-left: 83px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 790px;
+        height: 200px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 16px;
+        margin-left: -17px;
+        height: 313px;
+        width: 363px;
+    }
+    
+    .main-block__dialogmain {
+        width: 453px;
+        height: 268px;
+        margin-top: -329px;
+        margin-left: 340px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 30px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -239px;
+        margin-left: 396px;
+        text-align: center;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1215px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        font-size: 40px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -164px;
+        margin-left: 201px;
+    }
+    
+    .main-block__image {
+        display: none;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        width: 988px;
+        height: 221px;
+        margin-top: 18px;
+        margin-left: -6px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 16px;
+        margin-left: -6px;
+        height: 360px;
+        width: 431px;
+    }
+    
+    .main-block__dialogmain {
+        width: 569px;
+        height: 327px;
+        margin-top: -382px;
+        margin-left: 419px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 35px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -279px;
+        margin-left: 508px;
+        text-align: center;
+    }
+
+    .main-block__girly {
+        display: none;
+    }
+    
+    .main-block__pixel-text {
+        display: none;
+    }
+    
+    .main-block__dog {
+        display: none;
+    }
+    
+    .main-block__letter {
+        display: none;
+    }
+    
+    .main-block__bear {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1215px) and (max-width:1496px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__title {
+        position: absolute;
+        font-size: 35px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -424px;
+        margin-left: 35px;
+    }
+    
+    .main-block__image {
+        position: absolute;
+        mix-blend-mode: darken;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+    
+    .main-block__dialog {
+        position: relative;
+        margin-top: 85px;
+        margin-left: -25px;
+    }
+    
+    .main-block__pixel {
+        margin-top: 260px;
+        margin-left: -658px;
+    }
+    
+    .main-block__dialogmain {
+        margin-top: 222px;
+        margin-left: -19px;
+    }
+    
+    .main-block__text {
+        position: absolute;
+        font-size: 25px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: -248px;
+        margin-left: 290px;
+        text-align: center;
+    }
+    
+    .main-block__girly {
+        margin-left: 138px;
+        margin-top: -70px;
+    }
+    
+    .main-block__pixel-text {
+        position: absolute;
+        z-index: -1;
+        margin-left: -693px;
+        margin-top: -69px;
+    }
+    
+    .main-block__dog {
+        width: 170px;
+        height: 170px;
+        margin-left: 603px;
+        margin-top: -126px;
+    }
+    
+    .main-block__letter {
+        width: 100px;
+        margin-top: -272px;
+        margin-left: -150px;
+        height: 64px;
+    }
+    
+    .main-block__bear {
+        margin-left: -686px;
+        margin-top:  -159px;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:310px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        margin-left: 27%;
+    }
+}
+
+@media screen and (min-width:310px) and (max-width:478px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        margin-left: 50%;
+    }
+}
+
+
+@media screen and (min-width:478px) and (max-width:767px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        margin-left: 50%;
+    }
+}
+
+/*---------FOOTER---------*/
+
+.footer__text {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.footer__list {
+    flex-wrap: wrap;
+    display: flex;
+    padding-left: 100px;
+}
+
+.footer__item {
+    margin: 0px 45px 0px 0px;
+}
+
+.footer__link {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.footer__designation {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+}
+
+@media screen and (min-width:1142px) and (max-width:1266px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        display: flex;
+        padding-left: 100px;
+    }
+    
+    .footer__item {
+        margin: 0px 20px 0px 0px;
+    }
+    
+    .footer__link {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1142px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        display: flex;
+        padding-left: 486px;
+    }
+    
+    .footer__item {
+        margin: 0px 20px 0px 0px;
+    }
+    
+    .footer__link {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1000px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        display: flex;
+        padding-left: 387px;
+    }
+    
+    .footer__item {
+        margin: 0px 20px 0px 0px;
+    }
+    
+    .footer__link {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:850px) and (max-width:900px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        display: flex;
+        padding-left: 336px;
+    }
+    
+    .footer__item {
+        margin: 0px 20px 0px 0px;
+    }
+    
+    .footer__link {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:850px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        display: flex;
+        padding-left: 286px;
+    }
+    
+    .footer__item {
+        margin: 0px 20px 0px 0px;
+    }
+    
+    .footer__link {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:800px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        display: flex;
+        padding-left: 286px;
+    }
+    
+    .footer__item {
+        margin: 0px 20px 0px 0px;
+    }
+    
+    .footer__menu {
+        display: none;
+    }
+    
+    .footer__link {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+        text-align: -webkit-center;
+    }
+}
+
+@media screen and (min-width:558px) and (max-width:700px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__menu {
+        display: none;
+    }
+
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+        text-align: -webkit-center;
+    }
+}
+
+@media screen and (min-width:230px) and (max-width:558px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__menu {
+        display: none;
+    }
+
+    .footer__designation {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 20px;
+        color: #000000;
+        padding-top: 30px;
+        text-align: -webkit-center;
+    }
+}
+
+/*---------ABOUT-MAIN---------*/
+
+h2 {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+    float: left;
+}
+
+.about {
+    width: 881px;
+    height: 559px;
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 122.5%;
+    letter-spacing: 0.135em;
+    color: #000000;
+    padding-top: 50px;
+}
+
+.myimage {
+    width: 440px;
+    height: 430px;
+    margin-top: -489px;
+    margin-left: 869px;
+}
+
+@media screen and (min-width:230px) and (max-width:290px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__body {
+        padding: 120px 0px 50px 0px;
+        position: relative;
+        z-index: 2;
+    }
+
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 209px;
+        height: 559px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 186px;
+        height: 180px;
+        margin-top: -22px;
+        margin-left: 11px;
+    }
+}
+
+@media screen and (min-width:290px) and (max-width:349px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 266px;
+        height: 438px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 275px;
+        height: 270px;
+        margin-top: -57px;
+        margin-left: -5px;
+    }
+}
+
+@media screen and (min-width:349px) and (max-width:389px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 325px;
+        height: 559px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 290px;
+        height: 297px;
+        margin-top: -239px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width:389px) and (max-width:444px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 379px;
+        height: 559px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 322px;
+        height: 321px;
+        margin-top: -182px;
+        margin-left: 34px;
+    }
+}
+
+@media screen and (min-width:444px) and (max-width:540px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 432px;
+        height: 275px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 323px;
+        height: 322px;
+        margin-top: 9px;
+        margin-left: 41px;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:600px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 544px;
+        height: 288px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 311px;
+        height: 309px;
+        margin-top: 11px;
+        margin-left: 104px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:665px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 585px;
+        height: 261px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 386px;
+        height: 395px;
+        margin-top: 7px;
+        margin-left: 91px;
+    }
+}
+
+@media screen and (min-width:665px) and (max-width:700px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 697px;
+        height: 559px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 407px;
+        height: 396px;
+        margin-top: -252px;
+        margin-left: 155px;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:800px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 697px;
+        height: 559px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 407px;
+        height: 396px;
+        margin-top: -252px;
+        margin-left: 189px;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1000px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+        
+    .about {
+        width: 457px;
+        height: 310px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+        
+    .myimage {
+        width: 365px;
+        height: 366px;
+        margin-top: -341px;
+        margin-left: 486px;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1215px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    h2 {
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+        color: #000000;
+        float: left;
+    }
+    
+    .about {
+        width: 537px;
+        height: 361px;
+        font-family: 'Press Start 2P';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 122.5%;
+        letter-spacing: 0.135em;
+        color: #000000;
+        padding-top: 50px;
+    }
+    
+    .myimage {
+        width: 440px;
+        height: 430px;
+        margin-top: -437px;
+        margin-left: 539px;
+    }
+}
+
